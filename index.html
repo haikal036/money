@@ -9,18 +9,19 @@
 
     <table>
         <tr>
-            <td><label for="inboxName">Enter Base Salary:</label></td>
+            <td><label for="base">Enter Base Salary:</label></td>
             <td><input type="text" id="base" name="inboxName" required></td>
         </tr>
 
         <tr>
-            <td><label for="inboxName">Overtime (Hrs):</label></td>
+            <td><label for="overtime">Overtime (Hrs):</label></td>
             <td><input type="text" id="overtime" name="inboxName" required></td>
         </tr>
         
         <tr>
-            <td><label for="inboxName">Enter EPF Percent Deductions :</label></td>
-            <td><select name="epf" id="epf">
+            <td><label for="epf">Enter EPF Percent Deductions :</label></td>
+            <td>
+                <select name="epf" id="epf">
                     <option value="9%">9%</option>
                     <option value="11%">11%</option>
                 </select>
@@ -33,29 +34,28 @@
 
     <p id="total"> Total Salary after deductions :</p>
 
+    <script>
+        function calculate() {
+            // Get value from input fields
+            var base = parseFloat(document.getElementById("base").value);
+            var overtime = parseFloat(document.getElementById("overtime").value);
+            var epf = parseFloat(document.getElementById("epf").value);
+
+            // Check if inputs are valid
+            if (isNaN(base) || isNaN(overtime) || isNaN(epf)) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+            // Perform the calculation
+            var sum = base * (epf/100);
+            var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
+            var total = sum + ot;
+
+            // Display the result
+            document.getElementById("total").textContent = "Total Salary after deductions: " + total.toFixed(2);
+        }
+    </script>
+
 </body>
 </html>
-
-<script>
-    function calculate() {
-        // Get value from input fields
-
-        var base = parseFloat(document.getElementById("base").value);
-        var overtime = parseFloat(document.getElementById("base").value);
-        var epf = parseFloat(document.getElementById("base").value);
-    }
-
-    if (isNaN(base)|| isNaN(overtime) || isNaN(epf)) {
-        alert("Please do not leave blank");
-        return;
-
-        //perform the calculation
-    var sum = base * epf;
-    var ot = overtime * 14.42;
-    var total = sum + ot;
-
-    //display the result
-    document.getElementById("total").textContent = "Total Salary after deductions :" + total;
-    }
-
-</script>
