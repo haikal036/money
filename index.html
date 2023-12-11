@@ -10,24 +10,51 @@
 <form action="process.php" method="post">
     <table>
         <tr>
-            <td><label for="inboxName">Enter Inbox Name:</label></td>
-            <td><input type="text" id="inboxName" name="inboxName" required></td>
-            <td><button type="submit" name="addInbox">Add Inbox</button></td>
+            <td><label for="inboxName">Enter Base Salary:</label></td>
+            <td><input type="text" id="base" name="inboxName" required></td>
+        </tr>
+
+        <tr>
+            <td><label for="inboxName">Overtime (Hrs):</label></td>
+            <td><input type="text" id="overtime" name="inboxName" required></td>
         </tr>
         
         <tr>
-            <td><label for="inboxName">Enter Inbox Name:</label></td>
-            <td><input type="text" id="inboxName" name="inboxName" required></td>
-            <td><button type="submit" name="addInbox">Add Inbox</button></td>
+            <td><label for="inboxName">Enter EPF Percent Deductions :</label></td>
+            <td><select name="epf" id="epf">
+                    <option value="9%">9%</option>
+                    <option value="11%">11%</option>
+                </select>
+            </td>
         </tr>
+
         
-        <tr>
-            <td><label for="inboxName">Enter Inbox Name:</label></td>
-            <td><input type="text" id="inboxName" name="inboxName" required></td>
-            <td><button type="submit" name="addInbox">Add Inbox</button></td>
-        </tr>
     </table>
 </form>
 
 </body>
 </html>
+
+<script>
+    function calculate() {
+        // Get value from input fields
+
+        var base = parseFloat(document.getElementById("base").value);
+        var overtime = parseFloat(document.getElementById("base").value);
+        var epf = parseFloat(document.getElementById("base").value);
+    }
+
+    if (isNaN(base)|| isNaN(overtime) || isNaN(epf)) {
+        alert("Please do not leave blank");
+        return;
+
+        //perform the calculation
+    var sum = base * epf;
+    var ot = overtime * 14.42;
+    var total = sum + ot;
+
+    //display the result
+    document.getElementById("total").textContent = "Total Salary after deductions :" + total;
+    }
+
+</script>
