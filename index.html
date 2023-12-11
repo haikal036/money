@@ -48,7 +48,7 @@
             }
 
             // Perform the calculation
-            var sum = base * (epf/100);
+            var sum = base - (base * (epf/100));
             var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
             var total = sum + ot;
 
