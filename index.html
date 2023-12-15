@@ -17,6 +17,11 @@
             <td><label for="overtime">Overtime (Hrs):</label></td>
             <td><input type="text" id="overtime" name="inboxName" required></td>
         </tr>
+
+        <tr>
+            <td><label for="allowance">Allowance :</label></td>
+            <td><input type="text" id="allowance" name="inboxName" required></td>
+        </tr>
         
         <tr>
             <td><label for="epf">Enter EPF Percent Deductions :</label></td>
@@ -48,7 +53,9 @@
             }
 
             // Perform the calculation
-            var sum = base - (base * (epf/100));
+            var sum = base - (base * (epf/100) + allowance);
+            var socso = sum * 0.0049;
+            var eis = sum * 0.002;
             var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
             var total = sum + ot;
 
