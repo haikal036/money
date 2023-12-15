@@ -37,32 +37,15 @@
         </tr>
     </table>
 
-    <p id="total"> Total Salary after deductions :</p>
+    <script src="calculate.js"></script>
 
-    <script>
-        function calculate() {
-            // Get value from input fields
-            var base = parseFloat(document.getElementById("base").value);
-            var overtime = parseFloat(document.getElementById("overtime").value);
-            var epf = parseFloat(document.getElementById("epf").value);
-
-            // Check if inputs are valid
-            if (isNaN(base) || isNaN(overtime) || isNaN(epf)) {
-                alert("Please enter valid numbers");
-                return;
-            }
-
-            // Perform the calculation
-            var sum = base - (base * (epf/100) + allowance);
-            var socso = sum * 0.0049;
-            var eis = sum * 0.002;
-            var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
-            var total = sum + ot;
-
-            // Display the result
-            document.getElementById("total").textContent = "Total Salary after deductions: " + total.toFixed(2);
-        }
-    </script>
-
+    <p id="salary"> Base Salary :</p>
+    <p id="ot"> Overtime (Hrs) :</p>
+    <p id="totalepf"> EPF Deduction :</p>
+    <p id="socso"> SOCSO :</p>
+    <p id="eis"> EIS :</p>
+    <p id="total"> Banked In :</p>
+    <p id="sadaqa">Sadaqa Amirul Amri : </p>
+    
 </body>
 </html>
