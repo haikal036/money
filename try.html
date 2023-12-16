@@ -9,36 +9,12 @@
 <body>
 
     <table>
-        <tr>
-            <td><label for="base">Enter Base Salary:</label></td>
-            <td><input type="text" id="base" name="inboxName" required></td>
-        </tr>
-
-        <tr>
-            <td><label for="overtime">Overtime (Hrs):</label></td>
-            <td><input type="text" id="overtime" name="inboxName" required></td>
-        </tr>
-
-        <tr>
-            <td><label for="allowance">Allowance :</label></td>
-            <td><input type="text" id="allowance" name="inboxName" required></td>
-        </tr>
-        
-        <tr>
-            <td><label for="epf">Enter EPF Percent Deductions :</label></td>
-            <td>
-                <select name="epf" id="epf">
-                    <option value="9%">9%</option>
-                    <option value="11%">11%</option>
-                </select>
-            </td>
-        </tr>  
+        <!-- ... (your table rows) ... -->
         <tr>
             <td><button onclick="calculate()">Calculate Now</button></td>
         </tr>
     </table>
 
-    <script src="calculate.js"></script>
     <button onclick="generatepdf()">Generate PDF</button>
 
     <p id="salary"> Base Salary :</p>
@@ -50,7 +26,6 @@
     <p id="sadaqa">Sadaqa Amirul Amri : </p>
 
     <script src="calculate.js"></script>
-    
     <script>
         function generatepdf() {
             // Create a new jsPDF instance
@@ -63,6 +38,5 @@
             pdf.save('sample.pdf');
         }
     </script>
-    
 </body>
 </html>
