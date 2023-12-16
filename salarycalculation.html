@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Calculation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -38,7 +39,6 @@
     </table>
 
     <script src="calculate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <button onclick="generatepdf()">Generate PDF</button>
 
     <p id="salary"> Base Salary :</p>
@@ -48,6 +48,20 @@
     <p id="eis"> EIS :</p>
     <p id="total"> Banked In :</p>
     <p id="sadaqa">Sadaqa Amirul Amri : </p>
+
+    <script src="calculate.js"></script>
+    <script>
+        function generatepdf() {
+            // Create a new jsPDF instance
+            const pdf = new jsPDF();
+        
+            // Add content to the PDF
+            pdf.text('Hello, this is a sample PDF!', 10, 10);
+        
+            // Save the PDF with a specific name
+            pdf.save('sample.pdf');
+        }
+    </script>
     
 </body>
 </html>
