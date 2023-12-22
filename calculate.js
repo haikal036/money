@@ -13,7 +13,7 @@ function calculate() {
     }
 
     // Perform the calculation
-    else if (epf== 9)
+    else if (epf == 9)
     {
     var salary = base;
     var totalepf = (base + allowance) * 0.009; //the base salary - epf
