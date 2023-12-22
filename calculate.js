@@ -16,7 +16,7 @@ function calculate() {
     else if (epf== 9)
     {
     var salary = base;
-    var totalepf = base * (9 / 100) + allowance; //the base salary - epf
+    var totalepf = (base + allowance) * 0.009; //the base salary - epf
     var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
     var socso = salary * 0.0049; //getting the socso tax
     var eis = salary * 0.002; //getting the eis tax
@@ -36,7 +36,7 @@ function calculate() {
     else
     {
     var salary = base;
-    var totalepf = base * (11 / 100) + allowance; //the base salary - epf
+    var totalepf = (base + allowance) * 0.011; //the base salary - epf
     var ot = overtime * 14.42 // Assuming an hourly rate, adjust as needed
     var socso = salary * 0.0049; //getting the socso tax
     var eis = salary * 0.002; //getting the eis tax
