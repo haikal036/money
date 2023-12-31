@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/calculate.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Your code here
+            var script = document.createElement('script');
+            script.src = '../js/calculate.js';
+            document.head.appendChild(script);
+        });
+    </script>
     <title>Salary Calculation</title>
 </head>
 <body>
