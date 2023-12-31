@@ -49,13 +49,4 @@ function calculate() {
     document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
     document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
     }
-
-    // Redirect to new page
-    window.location.href = 'salary.html' 
-    document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
-    document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
-    document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
-    document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
-    document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
-    document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
 }
