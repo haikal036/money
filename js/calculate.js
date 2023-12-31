@@ -23,6 +23,7 @@ function calculate() {
     var total = salary - totalepf - socso - eis + ot; //salary after all deductions
 
     // Display the result
+    window.location.href = '../html/salarycalculation.html';
     document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
     document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
     document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
@@ -42,6 +43,7 @@ function calculate() {
     var sadaqa = total * 0.5;
 
     // Display the result
+    window.location.href = '../html/salarycalculation.html';
     document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
     document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
     document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
