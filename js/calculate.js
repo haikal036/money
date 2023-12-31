@@ -21,7 +21,6 @@ function calculate() {
     var socso = salary * 0.0049; //getting the socso tax
     var eis = salary * 0.002; //getting the eis tax
     var total = salary - totalepf - socso - eis + ot; //salary after all deductions
-    var sadaqa = total * 0.5;
 
     // Display the result
     document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
@@ -30,7 +29,6 @@ function calculate() {
     document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
     document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
     document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
-    document.getElementById("sadaqa").textContent = "Sadaqa to Amirul Amri (RM): " + sadaqa.toFixed(2);
     }
 
     else
@@ -50,6 +48,14 @@ function calculate() {
     document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
     document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
     document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
-    document.getElementById("sadaqa").textContent = "Sadaqa to Amirul Amri (RM): " + sadaqa.toFixed(2);
     }
+
+    // Redirect to new page
+    window.location.href = 'salary.html' 
+    document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
+    document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
+    document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
+    document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
+    document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
+    document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
 }
