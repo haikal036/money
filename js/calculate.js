@@ -23,13 +23,14 @@ function calculate() {
     var total = salary - totalepf - socso - eis + ot; //salary after all deductions
 
     // Display the result
-    window.location.href = '../html/salarycalculation.html';
-    document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
-    document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
-    document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
-    document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
-    document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
-    document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
+     // Construct the URL with parameters
+     var redirectURL = '../html/salarycalculation.html' +
+                        '?salary=' + salary.toFixed(2) +
+                        '&ot=' + ot.toFixed(2) +
+                        '&totalepf=' + totalepf.toFixed(2) +
+                        '&socso=' + socso.toFixed(2) +
+                        '&eis=' + eis.toFixed(2) +
+                        '&total=' + total.toFixed(2);
     }
 
     else
@@ -43,12 +44,13 @@ function calculate() {
     var sadaqa = total * 0.5;
 
     // Display the result
-    window.location.href = '../html/salarycalculation.html';
-    document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
-    document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
-    document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
-    document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
-    document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
-    document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
+     // Construct the URL with parameters
+    var redirectURL = '../html/salarycalculation.html' +
+                      '?salary=' + salary.toFixed(2) +
+                      '&ot=' + ot.toFixed(2) +
+                      '&totalepf=' + totalepf.toFixed(2) +
+                      '&socso=' + socso.toFixed(2) +
+                      '&eis=' + eis.toFixed(2) +
+                      '&total=' + total.toFixed(2);
     }
 }
