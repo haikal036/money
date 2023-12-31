@@ -5,7 +5,7 @@ function calculate() {
     var overtime = parseFloat(document.getElementById("overtime").value);
     var epf = parseFloat(document.getElementById("epf").value);
     var allowance = parseFloat(document.getElementById("allowance").value); 
-
+    var redirectURL;
     // Check if inputs are valid
     if (isNaN(base) || isNaN(overtime) || isNaN(epf) || isNaN(allowance)) {
         alert("Please enter valid numbers");
@@ -24,13 +24,16 @@ function calculate() {
 
     // Display the result
      // Construct the URL with parameters
-     var redirectURL = '../html/salarycalculation.html' +
+    redirectURL = '../html/salarycalculation.html' +
                         '?salary=' + salary.toFixed(2) +
                         '&ot=' + ot.toFixed(2) +
                         '&totalepf=' + totalepf.toFixed(2) +
                         '&socso=' + socso.toFixed(2) +
                         '&eis=' + eis.toFixed(2) +
                         '&total=' + total.toFixed(2);
+
+    // Redirect to the calculated URL
+    window.location.href = redirectURL;           
     }
 
     else
@@ -45,12 +48,15 @@ function calculate() {
 
     // Display the result
      // Construct the URL with parameters
-    var redirectURL = '../html/salarycalculation.html' +
+    redirectURL = '../html/salarycalculation.html' +
                       '?salary=' + salary.toFixed(2) +
                       '&ot=' + ot.toFixed(2) +
                       '&totalepf=' + totalepf.toFixed(2) +
                       '&socso=' + socso.toFixed(2) +
                       '&eis=' + eis.toFixed(2) +
                       '&total=' + total.toFixed(2);
+                      
+    // Redirect to the calculated URL
+    window.location.href = redirectURL;
     }
 }
