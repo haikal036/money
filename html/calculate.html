@@ -9,22 +9,22 @@
             <div class="list-group list-group-flush">
                 <div class="card">Calculation Basic Salary</div>
                     <div class="card-body">
-                        <div>
+                        <div class="col">
                             <label for="basic_salary"> BASIC SALARY (RM) :</label>
                             <input type="text" id="basic_salary" name="basic" required>
                         </div>
 
-                        <div>
+                        <div class="col">
                             <label for="overtime"> OVERTIME (HOURS) :</label>
                             <input type="text" id="overtime" name="ot" required>
                         </div>
 
-                        <div>
+                        <div class="col">
                             <label for="allowance"> ALLOWANCE (RM) :</label>
                             <input type="text" id="allowance" name="allowance" required>
                         </div>
 
-                        <div>
+                        <div class="col">
                             <label for="epf_deduction"> EPF DEDUCTION (%) :</label>
                             <select name="epf" id="epf_deduction">
                                 <option value="9">9 %</option>
@@ -33,11 +33,13 @@
                         </div>
                     </div>
 
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calculate">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calculate">
                         Salary
-                    </button>
-
-                    <div class="modal" id="calculate">
+                        </button>
+                    </div>
+                    
+                    <div class="col modal" id="calculate">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
