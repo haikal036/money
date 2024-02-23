@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Calculate Now</button>
+                                    <button type="button" onclick="calculate()" class="btn btn-primary">Calculate Now</button>
                                 </div>
                             </div>
                         </div>
@@ -63,5 +63,25 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // Parsing Parameters on the Destination Page
+            const urlParams = new URLSearchParams(window.location.search);
+            const salary = parseFloat(urlParams.get('salary'));
+            const ot = parseFloat(urlParams.get('ot'));
+            const totalepf = parseFloat(urlParams.get('totalepf'));
+            const socso = parseFloat(urlParams.get('socso'));
+            const eis = parseFloat(urlParams.get('eis'));
+            const total = parseFloat(urlParams.get('total'));
+    
+            // Use the parsed parameters as needed
+            document.getElementById("salary").textContent = "Base (RM): " + salary.toFixed(2);
+            document.getElementById("ot").textContent = "Overtime (hrs): " + ot.toFixed(2);
+            document.getElementById("totalepf").textContent = "EPF Deduction: " + totalepf.toFixed(2);
+            document.getElementById("socso").textContent = "SOCSO: " + socso.toFixed(2);
+            document.getElementById("eis").textContent = "EIS: " + eis.toFixed(2);
+            document.getElementById("total").textContent = "Banked In (RM): " + total.toFixed(2);
+        </script>
+        
     </body>
 </html>
