@@ -16,8 +16,8 @@
                     
                 <div class="card-body">
                     <div class="row">
-                        <div class="col mt-2 mb-2"><label for="current_plan"> Current Plan (Before Upgrade):</label></div>
-                            <div class="col mt-2 mb-2">
+                        <div class="col"><label for="current_plan"> Current Plan (Before Upgrade):</label></div>
+                            <div class="col">
                                 <select class="form-select" name="current" id="current">
                                     <option id="basic_current" value="1.00"> Basic </option>
                                     <option id="standard_current" value="1.69"> Standard </option>
@@ -25,11 +25,11 @@
                                     <option id="ultimate_current" value="4.97"> Ultimate </option>
                                 </select>
                             </div>
-                            <div class="col mt-2 mb-2"><label for="bal_current_day"> Balance Current Plan Day :</label></div>
-                            <div class="col mt-2 mb-2"><input class="form-control" type="text" id="bal_current_day" name="bal_current_day" required></div>
+                            <div class="col"><label for="bal_current_day"> Balance Current Plan Day :</label></div>
+                            <div class="col"><input class="form-control" type="text" id="bal_current_day" name="bal_current_day" required></div>
                     
-                            <div class="col mt-2 mb-2"><label for="next_plan"> Next Plan (After Upgrade):</label></div>
-                            <div class="col mt-2 mb-2">
+                            <div class="col"><label for="next_plan"> Next Plan (After Upgrade):</label></div>
+                            <div class="col">
                                 <select class="form-select" name="next" id="next">
                                     <option id="basic_next" value="1.00"> Basic </option>
                                     <option id="standard_next" value="1.69"> Standard </option>
@@ -37,11 +37,11 @@
                                     <option id="standard_next" value="4.97"> Ultimate </option>
                                 </select>
                             </div>
-                            <div class="col mt-2 mb-2"><label for="bal_upgrade_day"> Balance Upgrade Plan Day :</label></div>
-                            <div class="col mt-2 mb-2"><input class="form-control" type="text" id="bal_upgrade" name="bal_upgrade_day" required></div>
+                            <div class="col"><label for="bal_upgrade_day"> Balance Upgrade Plan Day :</label></div>
+                            <div class="col"><input class="form-control" type="text" id="bal_upgrade" name="bal_upgrade_day" required></div>
                         
                         <div class="row">
-                            <div class="col mt-2 mb-2">
+                            <div class="col">
                                 <button type="button" onclick="cost()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                     Cost
                                 </button>
@@ -49,7 +49,7 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col mt-2 mb-2 modal" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="calculateLabel" aria-hidden="true">
+                            <div class="col modal" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="calculateLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
