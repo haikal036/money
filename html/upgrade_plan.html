@@ -75,16 +75,16 @@
         <script>
             // Parsing Parameters on the Destination Page
             const urlParams = new URLSearchParams(window.location.search);
-            const current = parseFloat(urlParams.get('current'));
+            const current_plan = parseFloat(urlParams.get('current_plan'));
             const bal_current_day = parseFloat(urlParams.get('bal_current_day'));
-            const next = parseFloat(urlParams.get('next'));
+            const next_plan = parseFloat(urlParams.get('next_plan'));
             const bal_upgrade_day = parseFloat(urlParams.get('bal_upgrade_day'));
     
             // Use the parsed parameters as needed
-            document.getElementById("current").textContent = "Current Plan : " + current_plan.toFixed(2);
+            document.getElementById("current_plan").textContent = "Current Plan : " + current_plan.toFixed(2);
             document.getElementById("bal_current_day").textContent = "Balance Current Day (Day): " + bal_current_day.toFixed(2);
-            document.getElementById("next").textContent = "Upgrade Plan: " + next_plan.toFixed(2);
-            document.getElementById("bal_upgrade_day").textContent = "Balance Upgrade Day: " + bal_upgrade_day.toFixed(2);
+            document.getElementById("next_plan").textContent = "Upgrade Plan: " + next_plan.toFixed(2);
+            document.getElementById("bal_upgrade_day").textContent = "Balance Upgrade Plan : " + bal_upgrade_day.toFixed(2);
         </script>
         
     </body>

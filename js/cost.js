@@ -1,7 +1,7 @@
 function cost() {
 
     // Get value from input fields
-    var current_plan = parseFloat(document.getElementById("current_plan").value);
+    var current_plan = parseFloat(document.getElementById("current").value);
     var bal_current_day = parseFloat(document.getElementById("bal_current_day").value);
     var next_plan = parseFloat(document.getElementById("next_plan").value);
     var bal_upgrade_day = parseFloat(document.getElementById("bal_upgrade_day").value); 
