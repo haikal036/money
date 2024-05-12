@@ -10,7 +10,8 @@
     <body>
         <body>
             <!-- this project is created using Bootstrap 5-->
-            <div class="position-absolute top-50 start-50 translate-middle container text-center">
+            <!--header-->
+            <div class="container position-absolute top-50 start-50 translate-middle container text-center">
                     <div class="card">
                         <div class="card-header">
                             Calculation Basic Salary
@@ -24,58 +25,58 @@
                                 </button>
                             </div>
                         </div>
-                        
-                        <div class="row card-body">
-                            <div class="col mt-2 mb-2">
-                                <label for="basic_salary"> BASIC SALARY (RM) :</label>
+                        <!--Body-->
+                        <div class="card-body">
+                            <div class="row pe-3 mt-3 mb-3">
+
+                                <div class="col">
+                                    <label for="basic_salary"> BASIC SALARY (RM) :</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="basic" name="basic" required>
+                                </div>
+
+                                <div class="col">
+                                    <label for="overtime"> OVERTIME (HOURS) :</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="overtime" name="ot" required>
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="text" class="form-control" id="basic" name="basic" required>
-                            </div>
-                        </div>
-                           
-                        <div class="row card-body">
-                            <div class="col mt-2 mb-2">
-                                <label for="overtime"> OVERTIME (HOURS) :</label>
-                            </div>
-                            <div class="col mt-2 mb-2">
-                                <input type="text" class="form-control" id="overtime" name="ot" required>
-                            </div>
-                        </div>
-        
-                        <div class="row card-body">
-                            <div class="col mt-2 mb-2">
-                                <label for="allowance"> ALLOWANCE (RM) :</label>
-                            </div>
-                            <div class="col mt-2 mb-2">
-                                <input type="text" class="form-control" id="allowance" name="allowance" required>
-                            </div>
-                        </div>
                             
-                        <div class="row card-body">
-                            <div class="col mt-2 mb-2">
+                            <div class="row pe-3 mt-3 mb-3">
+                                <div class="col">
+                                    <label for="allowance"> ALLOWANCE (RM) :</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="allowance" name="allowance" required>
+                                </div>
+
+                                <div class="col">
                                 <label for="epf_deduction"> EPF DEDUCTION (%) :</label>
-                            </div>
-                                <div class="col mt-2 mb-2">
+                                </div>
+                                <div class="col">
                                     <select name="epf" id="epf_deduction" class="form-control">
                                         <option value="9">9 %</option>
                                         <option value="11">11 %</option>
                                     </select>
                                 </div>
-                        </div>
-        
-                        <div class="col mt-2 mb-2">
-                            <button type="button" onclick="calculate()" class="btn btn-primary">
-                                Calculate
-                            </button>
-                        </div>
+                            </div>
 
-                        <div>
+                            <div class="col mt-2 mb-2">
+                                <button type="button" onclick="calculate()" class="btn btn-primary">
+                                    Calculate
+                                </button>
+                            </div>
+                        </div>
+                        <!--Display result-->
+                        <div class="col">
                             <div id="gross_wage"></div>
                             <div id="totalepf"></div>
                             <div id="socso"></div>
                             <div id="eis"></div>
                             <div id="total"></div>
                         </div>
+                    </div>
     </body>
 </html>
