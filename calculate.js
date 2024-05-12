@@ -15,27 +15,35 @@ function calculate() {
     // Perform the calculation
     else if (epf_deduction == 9)
     {
-    var salary = basic;
-    var totalepf = (basic + allowance) * 0.009; //the base salary - epf
-    var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
-    var socso = salary * 0.0049; //getting the socso tax
-    var eis = salary * 0.002; //getting the eis tax
-    var total = salary - totalepf - socso - eis + ot; //salary after all deductions
-
-    document.getElementById('total').textContent = "Total Salary : RM " + total;
+        var gross_wage = basic + allowance;
+        var totalepf = (basic + allowance) * 0.09; //the base salary - epf
+        var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
+        var socso = basic * 0.0049; //getting the socso tax
+        var eis = basic * 0.002; //getting the eis tax
+        var total = gross_wage - totalepf - socso - eis + ot; //salary after all deductions
+    
+    document.getElementById('gross_wage').textContent = "Gross Wage : RM " + gross_wage.toFixed(2);
+    document.getElementById('totalepf').textContent = "EPF Deduction : RM " + totalepf.toFixed(2);
+    document.getElementById('socso').textContent = "Socso : RM " + socso.toFixed(2);
+    document.getElementById('eis').textContent = "EIS : RM " + eis.toFixed(2);
+    document.getElementById('total').textContent = "Net Wage : RM " + total.toFixed(2);
     }
 
     else if (epf_deduction == 11)
         {
-        var salary = basic;
-        var totalepf = (basic + allowance) * 0.0011; //the base salary - epf
+        var gross_wage = basic + allowance;
+        var totalepf = (basic + allowance) * 0.11; //the base salary - epf
         var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
-        var socso = salary * 0.0049; //getting the socso tax
-        var eis = salary * 0.002; //getting the eis tax
-        var total = salary - totalepf - socso - eis + ot; //salary after all deductions
+        var socso = basic * 0.0049; //getting the socso tax
+        var eis = basic * 0.002; //getting the eis tax
+        var total = gross_wage - totalepf - socso - eis + ot; //salary after all deductions
     
-        document.getElementById('total').textContent = "Total Salary : RM " + total;
-        }
+    document.getElementById('gross_wage').textContent = "Gross Wage : RM " + gross_wage.toFixed(2);
+    document.getElementById('totalepf').textContent = "EPF Deduction : RM " + totalepf.toFixed(2);
+    document.getElementById('socso').textContent = "Socso : RM " + socso.toFixed(2);
+    document.getElementById('eis').textContent = "EIS : RM " + eis.toFixed(2);
+    document.getElementById('total').textContent = "Net Wage : RM " + total.toFixed(2);
+    }
 }
 
 (() => {
