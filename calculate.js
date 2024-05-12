@@ -18,8 +18,8 @@ function calculate() {
         var gross_wage = basic + allowance;
         var totalepf = (basic + allowance) * 0.09; //the base salary - epf
         var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
-        var socso = basic * 0.0049; //getting the socso tax
-        var eis = basic * 0.002; //getting the eis tax
+        var socso = gross_wage * 0.0049; //getting the socso tax
+        var eis = gross_wage * 0.002; //getting the eis tax
         var total = gross_wage - totalepf - socso - eis + ot; //salary after all deductions
     
     document.getElementById('gross_wage').textContent = "Gross Wage : RM " + gross_wage.toFixed(2);
@@ -34,8 +34,8 @@ function calculate() {
         var gross_wage = basic + allowance;
         var totalepf = (basic + allowance) * 0.11; //the base salary - epf
         var ot = overtime * 14.42; // Assuming an hourly rate, adjust as needed
-        var socso = basic * 0.0049; //getting the socso tax
-        var eis = basic * 0.002; //getting the eis tax
+        var socso = gross_wage * 0.0049; //getting the socso tax
+        var eis = gross_wage * 0.002; //getting the eis tax
         var total = gross_wage - totalepf - socso - eis + ot; //salary after all deductions
     
     document.getElementById('gross_wage').textContent = "Gross Wage : RM " + gross_wage.toFixed(2);
